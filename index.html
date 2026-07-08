@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Puchuuuuu ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(-45deg,#ff9a9e,#fad0c4,#fbc2eb,#a18cd1);
+background-size:400% 400%;
+animation:bg 10s infinite;
+overflow:hidden;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.container{
+text-align:center;
+color:white;
+padding:20px;
+}
+
+h1{
+font-size:3rem;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{text-shadow:0 0 10px white;}
+to{text-shadow:0 0 30px hotpink;}
+}
+
+p{
+font-size:22px;
+margin-top:20px;
+}
+
+button{
+margin-top:30px;
+padding:15px 30px;
+font-size:18px;
+border:none;
+border-radius:30px;
+background:white;
+color:hotpink;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+}
+
+.heart{
+position:absolute;
+color:pink;
+font-size:25px;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:1;
+}
+100%{
+transform:translateY(-100px);
+opacity:0;
+}
+}
+
+#msg{
+margin-top:25px;
+font-size:24px;
+display:none;
+color:yellow;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>🎂 Happy Birthday Puchuuuuu 💋🎀</h1>
+
+<p>
+May your smile always shine brighter than the stars ✨❤️<br><br>
+You are the most beautiful part of my life.<br>
+Stay happy forever. 💖
+</p>
+
+<button onclick="showWish()">Click Here 🎁</button>
+
+<div id="msg">
+🥳 I Love You So Much Puchuuuuu ❤️<br>
+Happy Birthday My Princess 👑💋
+</div>
+
+</div>
+
+<script>
+
+function showWish(){
+document.getElementById("msg").style.display="block";
+alert("Happy Birthday Puchuuuuu 💋🎂❤️");
+}
+
+function hearts(){
+
+let heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(20+Math.random()*30)+"px";
+heart.style.animationDuration=(3+Math.random()*4)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},7000);
+
+}
+
+setInterval(hearts,250);
+
+</script>
+
+</body>
+</html>
